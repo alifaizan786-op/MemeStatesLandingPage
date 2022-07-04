@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/MemeStatesLandingPage/static/css/main.b895aa18.css",
-    "main.js": "/MemeStatesLandingPage/static/js/main.4004679a.js",
+    "main.css": "/MemeStatesLandingPage/static/css/main.459562f6.css",
+    "main.js": "/MemeStatesLandingPage/static/js/main.e60a4451.js",
     "static/media/logo-dark.png": "/MemeStatesLandingPage/static/media/logo-dark.31604a943810ee403fd3.png",
+    "static/media/banner-moc-1-1.png": "/MemeStatesLandingPage/static/media/banner-moc-1-1.cf033f4a765fa7479efa.png",
     "index.html": "/MemeStatesLandingPage/index.html",
-    "main.b895aa18.css.map": "/MemeStatesLandingPage/static/css/main.b895aa18.css.map",
-    "main.4004679a.js.map": "/MemeStatesLandingPage/static/js/main.4004679a.js.map"
+    "main.459562f6.css.map": "/MemeStatesLandingPage/static/css/main.459562f6.css.map",
+    "main.e60a4451.js.map": "/MemeStatesLandingPage/static/js/main.e60a4451.js.map"
   },
   "entrypoints": [
-    "static/css/main.b895aa18.css",
-    "static/js/main.4004679a.js"
+    "static/css/main.459562f6.css",
+    "static/js/main.e60a4451.js"
   ]
 }
