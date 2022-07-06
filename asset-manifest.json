@@ -1,15 +1,26 @@
 {
   "files": {
-    "main.css": "/MemeStatesLandingPage/static/css/main.459562f6.css",
-    "main.js": "/MemeStatesLandingPage/static/js/main.e60a4451.js",
+    "main.css": "/MemeStatesLandingPage/static/css/main.a1a81131.css",
+    "main.js": "/MemeStatesLandingPage/static/js/main.c7518dd2.js",
+    "static/media/Asset 5@300x.png": "/MemeStatesLandingPage/static/media/Asset 5@300x.ed6042b8a00fead97150.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/MemeStatesLandingPage/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/MemeStatesLandingPage/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/MemeStatesLandingPage/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/MemeStatesLandingPage/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/MemeStatesLandingPage/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/dimon-icon.svg?ge3xd6": "/MemeStatesLandingPage/static/media/dimon-icon.cb4d50d2f33ffbcbbf1d.svg",
+    "static/media/cta-moc-1-1.png": "/MemeStatesLandingPage/static/media/cta-moc-1-1.89cb1c8d09496789b218.png",
     "static/media/logo-dark.png": "/MemeStatesLandingPage/static/media/logo-dark.31604a943810ee403fd3.png",
     "static/media/banner-moc-1-1.png": "/MemeStatesLandingPage/static/media/banner-moc-1-1.cf033f4a765fa7479efa.png",
+    "static/media/dimon-icon.eot?ge3xd6": "/MemeStatesLandingPage/static/media/dimon-icon.404cc334cf6af78ee9f3.eot",
+    "static/media/dimon-icon.woff?ge3xd6": "/MemeStatesLandingPage/static/media/dimon-icon.4ee92793c2baf45fd77d.woff",
+    "static/media/dimon-icon.ttf?ge3xd6": "/MemeStatesLandingPage/static/media/dimon-icon.12de17b1b8709cdda392.ttf",
     "index.html": "/MemeStatesLandingPage/index.html",
-    "main.459562f6.css.map": "/MemeStatesLandingPage/static/css/main.459562f6.css.map",
-    "main.e60a4451.js.map": "/MemeStatesLandingPage/static/js/main.e60a4451.js.map"
+    "main.a1a81131.css.map": "/MemeStatesLandingPage/static/css/main.a1a81131.css.map",
+    "main.c7518dd2.js.map": "/MemeStatesLandingPage/static/js/main.c7518dd2.js.map"
   },
   "entrypoints": [
-    "static/css/main.459562f6.css",
-    "static/js/main.e60a4451.js"
+    "static/css/main.a1a81131.css",
+    "static/js/main.c7518dd2.js"
   ]
 }
