@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
+import Memers from "./components/Memer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Header/>
         <Banner/>
         <AboutUs/>
+        <Memers/>
       </Router>
     </div>
   );
