@@ -4,10 +4,11 @@ import BannerMoc from "../assets/images/mocs/banner-moc-1-1.png";
 export default function Banner() {
   return (
     <section className="banner-one" id="banner">
-      <span className="banner-one__shape-1"></span>
-      <span className="banner-one__shape-2"></span>
-      <span className="banner-one__shape-3"></span>
-      <span className="banner-one__shape-4"></span>
+      <span className="banner-one__shape-1">Meme</span>
+      <span className="banner-one__shape-2">Meme</span>
+      <span className="banner-one__shape-3">Meme</span>
+      <span className="banner-one__shape-4">Meme</span>
+      <span className="banner-one__shape-5">Meme</span>
       <div className="container">
         <div className="banner-one__moc">
           <img src={BannerMoc} alt="alter text" />
@@ -16,16 +17,15 @@ export default function Banner() {
           <div className="col-xl-6 col-lg-8">
             <div className="banner-one__content">
               <h3 className="banner-one__title">
-                We Deliver the <br />
-                <span>Software</span> you <br /> Need.
+                Tired Of Personal <br />Posts .... <br />
+                <span>Why not !?</span> <br /> Just Memes !
               </h3>
               <p className="banner-one__text">
-                We are committed to providing our customers with <br />{" "}
-                exceptional service while offering our employees the <br /> best
-                training.
+                We are committed to providing you with just <br />{" "}
+                <strong>Just High Quality Memes</strong> <br /> From the Best Memers Out There.
               </p>
               <a href="#none" className="banner-one__btn thm-btn ">
-                <span>Get Started</span>
+                <span>Sign Up !</span>
               </a>
             </div>
           </div>

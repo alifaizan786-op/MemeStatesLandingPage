@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";  
 import logoDark from "../assets/images/resources/logo-dark.png";
+import logo from "../assets/images/logo/Asset 5@300x.png"
 
 export default function Header() {
   const [navOpen, setNavOpen] = React.useState(false);
@@ -32,9 +33,7 @@ export default function Header() {
           </button>
         </div>
         <div className="center">
-          <h1 className="logo">
-            Meme States
-          </h1>
+          <img src={logo} alt="" srcset="" />
         </div>
         <div className="right">
           {/* Empty Space */}

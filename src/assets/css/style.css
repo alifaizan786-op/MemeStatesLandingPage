@@ -60,6 +60,7 @@ a {
 .header {
   display: flex;
   padding: 1%;
+  max-height: 100px;
 }
 
 .header .left,
@@ -109,6 +110,12 @@ a {
   background-size: 300%;
   animation: bg-animation 1s infinite;
 }
+
+.header .center img {
+  width: 25%;
+  position: relative;
+  z-index: 2;
+  }
 
 /* 205, 64, 143 */
 /* 9, 79, 195 */
@@ -174,7 +181,9 @@ a {
   }
 }
 
-/* Banner */
+/*
+* 3. banner styles
+*/
 
 [class*="banner-one__shape-"] {
   position: absolute;
@@ -186,6 +195,13 @@ a {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   background-size: 300%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Caveat";
 }
 
 .banner-one__shape-1 {
@@ -244,7 +260,19 @@ a {
   perspective: 85px;
 }
 
-
+.banner-one__shape-5 {
+  background-image: linear-gradient(40deg, #0db8ff 0%, #f332ff 100%);
+  -webkit-box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
+  box-shadow: 0px 20px 60px 0px rgba(141, 142, 255, 0.8);
+  width: 85px;
+  height: 85px;
+  bottom: 20%;
+  right: 4%;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-perspective: 85px;
+  perspective: 85px;
+}
 
 @keyframes bubbleMover {
   0% {
@@ -281,9 +309,7 @@ a {
   }
 }
 
-/*
-* 3. banner styles
-*/
+
 .banner-one {
   position: relative;
   background-image: url(../images/background/banner-bg-1-1.png);
@@ -324,6 +350,62 @@ a {
   bottom: 7%;
   right: -30px;
 }
+
+.banner-one__btn {
+  padding: 18px 55px;
+}
+
+.thm-btn {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2a2833;
+  padding: 13px 41px;
+  border-radius: 5px;
+  -webkit-transition: background 0.4s ease, color 0.4s ease;
+  transition: background 0.4s ease, color 0.4s ease;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff4eb5),
+    to(#ffa065)
+  );
+  background-image: linear-gradient(90deg, #ff4eb5 0%, #ffa065 100%);
+  position: relative;
+  z-index: 2;
+}
+.thm-btn:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.thm-btn span {
+  position: relative;
+}
+.thm-btn:hover {
+  color: #fff;
+}
+.thm-btn:hover:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+
 .banner-one__moc:before {
   content: "";
   width: 639px;
@@ -332,6 +414,7 @@ a {
   -webkit-box-shadow: 0px 20px 60px 0px rgba(244, 151, 190, 0.8);
   box-shadow: 0px 20px 60px 0px rgba(244, 151, 190, 0.8);
   border-radius: 50%;
+  background-size: 300%;
   position: absolute;
   top: -14%;
   left: -24%;
@@ -339,8 +422,8 @@ a {
   transform-origin: center bottom;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
+  -webkit-animation-name: bg-animation;
+  animation-name: bg-animation;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
   -webkit-animation-duration: 5s;
@@ -353,3 +436,96 @@ a {
   -webkit-animation: featureImgBounce 5s ease-in-out 0s infinite alternate;
   animation: featureImgBounce 5s ease-in-out 0s infinite alternate;
 }
+
+
+/*
+* 15. cta styles
+*/
+.cta-one {
+  padding: 165px 0;
+  position: relative;
+}
+.cta-one__bg {
+  position: absolute;
+    bottom: 4%;
+    left: 0;
+    transform: scaleX(-1);
+}
+.cta-one .container {
+  position: relative;
+}
+.cta-one .container:before {
+  content: "";
+  width: 448px;
+  height: 448px;
+  border-radius: 50%;
+  background-color: #f6fff7;
+  position: absolute;
+  top: -19%;
+  left: -12%;
+}
+.cta-one__moc {
+  position: absolute;
+  top: -45px;
+  left: -10%;
+  -webkit-animation: featureImgBounce 5s ease-in-out 0s infinite alternate;
+  animation: featureImgBounce 5s ease-in-out 0s infinite alternate;
+}
+.cta-one .block-title {
+  margin-bottom: 0;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+.cta-one .block-title__title {
+  letter-spacing: -0.04em;
+}
+.cta-one__icon {
+  font-size: 62px;
+  color: #ff4eb5;
+}
+.cta-one__text p {
+  margin: 0;
+  color: #74727a;
+  font-size: 24px;
+  line-height: 40px;
+}
+.cta-one ul {
+  margin: 0;
+  margin-top: 45px;
+  margin-bottom: 50px;
+}
+.cta-one ul li {
+  position: relative;
+  font-size: 16px;
+  color: #74727a;
+  padding-left: 30px;
+}
+.cta-one ul li + li {
+  margin-top: 3px;
+}
+.cta-one ul li i {
+  font-size: 18px;
+  color: #ffa065;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.cta-one .thm-btn {
+  padding: 18px 55.5px;
+}
+
+
+.block-title__title {
+  margin: 0;
+  margin-top: -10px;
+  font-size: 50px;
+  font-weight: 400;
+  color: #2a2833;
+  line-height: 1.2em;
+}
+.block-title__title span {
+  font-weight: 700;
+}
+
