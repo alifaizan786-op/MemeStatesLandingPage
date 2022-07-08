@@ -12,13 +12,17 @@ connection.once('open', async () => {
 
         let users = [];
 
+        let userIds = []
+
         await User.deleteMany({});
 
         console.log('=========Collections Emptied================');
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
+            let userName = faker.internet.userName()
+
             let user = {
-                username: faker.internet.userName(),
+                username: userName,
                 email: faker.internet.email(),
                 password: faker.internet.password(),
                 profilePic: faker.image.avatar(),
@@ -27,12 +31,43 @@ connection.once('open', async () => {
                 dateOfBirth: faker.date.birthdate(),
                 description: faker.word.adjective()
             }
-            users.push(user)
+            await User.create(user);
+
+            users.push(userName)
         }
 
-        console.log(users);
 
-        await Session.create(users);
+        for (let i = 0; i < users.length; i++) {
+            ({_id: this._User} = await User.findOne({username: users[i]}));
+            const UserId = this._User;
+
+            userIds.push(UserId)
+        }
+
+
+        for (let i = 0; i < userIds.length; i++) {
+            for(let j = 0; j < 5; j++){
+                let randUser = userIds[Math.floor(Math.random() * userIds.length)]
+
+                if (userIds[i] !== randUser) {
+                    console.log("yup");
+                    await User.findByIdAndUpdate(userIds[i], {
+                        $addToSet: {
+                            followers: randUser
+                        }
+                    })
+                }
+            }
+        }
+
+
+        const allUsers = User.find({})
+
+        for(let i = 0; i < 100; i++){
+            console.log(allUsers[i]);
+        }
+
+        console.log(allUsers);
 
         console.info('================Sessions Seeded================');
 
@@ -44,9 +79,8 @@ connection.once('open', async () => {
 
         console.log('=========Collections Emptied================');
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 100; i++) {
             sessions.push(sessionSeed())
-
         }
 
         console.log(sessions);

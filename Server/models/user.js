@@ -29,7 +29,6 @@ const userSchema = new Schema({
     firstName: {
         type: String,
         lowercase: true,
-        unique: true,
         required: [
             true, "can't be blank"
         ],
@@ -38,7 +37,6 @@ const userSchema = new Schema({
     lastName: {
         type: String,
         lowercase: true,
-        unique: true,
         required: [
             true, "can't be blank"
         ],

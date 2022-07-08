@@ -1,0 +1,54 @@
+query Sessions {
+  sessions {
+    _id
+    timeOpened
+    timezone
+    locationPathname
+    referrer
+    history
+    Language
+    OnLine
+    Platform
+    JavaEnabled
+    CookieEnabled
+    documentCookie
+    screenWidth
+    screenHeight
+    documentWidth
+    documentHeight
+    innerHeight
+    innerWidth
+    screenAvailWidth
+    screenAvailHeight
+    architecture
+    browser
+    browserV
+    operatingSystem
+    country
+  }
+}
+
+query Users {
+  users {
+    _id
+    username
+    email
+    password
+    firstName
+    profilePic
+    lastName
+    dateOfBirth
+    description
+    followers {
+      _id
+      username
+    }
+    score
+  }
+}
+
+
+
+
+
+
