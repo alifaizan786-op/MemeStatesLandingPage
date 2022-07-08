@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type='text/javascript'>
+    window.session = {
+    options: { gapi_location: true },
+    start: function(session){ // can also use window.session global.
+      if (session.first_session.visits > 1){
+        alert('Hi again from ' + session.location.address.city);
+      } else {
+        if (session.contains(session.current_session.referrer_info.host, 'facebook')){
+          alert('Hi there from '+ session.location.address.city +'. How about liking us on facebook?');
+        } else if (session.current_session.search.engine){
+          alert('Did you find what you were looking for from ' + session.current_session.search.engine + '?');
+        }
+      }
+    }
+  }
+  </script>
+  <script type='text/javascript' src="./session.js"></script>
+  <script src="./main.js"></script>
+</html>
