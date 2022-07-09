@@ -12,6 +12,8 @@ connection.once('open', async () => {
 
         let users = [];
 
+        let usernameArr = [];
+
         let userIds = []
 
         await User.deleteMany({});
@@ -33,12 +35,15 @@ connection.once('open', async () => {
             }
             await User.create(user);
 
-            users.push(userName)
+            usernameArr.push(userName)
+            users.push(user)
         }
 
+        console.log(users);
 
-        for (let i = 0; i < users.length; i++) {
-            ({_id: this._User} = await User.findOne({username: users[i]}));
+
+        for (let i = 0; i < usernameArr.length; i++) {
+            ({_id: this._User} = await User.findOne({username: usernameArr[i]}));
             const UserId = this._User;
 
             userIds.push(UserId)

@@ -43,9 +43,32 @@ const typeDefs = gql`
         country : String
     }
 
+    type Auth{
+        token : ID
+        user : User
+    }
+
     type Query{
         users : [User]
         sessions : [Session]
+    }
+
+    type Mutation{
+        addUser(
+            username:String!,
+            firstName:String!,
+            lastName:String!,
+            email:String!,
+            password:String!,
+            profilePic:String,
+            dateOfBirth:String!,
+        ) : User
+
+        login( 
+            username : String!,
+            email : String!, 
+            password: String!
+        ): Auth
     }
 `
 
