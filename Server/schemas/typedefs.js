@@ -69,6 +69,12 @@ const typeDefs = gql`
             email : String!, 
             password: String!
         ): Auth
+
+        updatePassword(
+            _id:ID,
+            oldPassword:String
+            newPassword:String
+        ) : User
     }
 `
 
