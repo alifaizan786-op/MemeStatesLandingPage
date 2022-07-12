@@ -65,10 +65,10 @@ export default function Memers() {
           <div className="testimonials-one__carousel">
             <Swiper getSwiper={setSwiper}>
                 {memers.map((memer, index)=>(
-                    <div className="item">
+                    <div key={index} className="item">
                     <div className="testimonials-one__single">
                       <div className="testimonials-one__inner">
-                        <p>
+           
                           <h3>{memer.followers}</h3>
                           <span>Followers</span>
     
@@ -77,7 +77,7 @@ export default function Memers() {
     
                           <h3>{memer.likes}</h3>
                           <span>Likes</span>
-                        </p>
+               
                         <h3>{memer.name}</h3>
                         <span>{memer.platform}</span>
                         <img src={memer.img} alt="alter text" />

@@ -10,16 +10,30 @@ export default function Header() {
     const navBtnBarTop = document.querySelector("#navBtnBarTop")
     const navBtnBarBtm = document.querySelector("#navBtnBarBtm")
     const fullscreenNav = document.querySelector(".fullscreenNav") 
-    if (navOpen === false) {
-      navBtnBarTop.setAttribute("style" , "transform: rotate(45deg) translateY(5.5px);");
-      navBtnBarBtm.setAttribute("style" , "transform: rotate(-45deg) translateY(-8px) translateX(2px);");
-      fullscreenNav.setAttribute("style", "height:100vh; opacity:1; padding:100px")
-      setNavOpen(true)
-    }else{
-      navBtnBarTop.setAttribute("style" , "transform: none;");
-      navBtnBarBtm.setAttribute("style" , "transform: none;");
-      fullscreenNav.setAttribute("style", "height:0vh; opacity:0; padding:0px")
-      setNavOpen(false)
+    if(window.screen.width < 1000){
+      if (navOpen === false) {
+        navBtnBarTop.setAttribute("style" , "transform: rotate(45deg) translateY(5.5px);");
+        navBtnBarBtm.setAttribute("style" , "transform: rotate(-45deg) translateY(-15px) translateX(10px);");
+        fullscreenNav.setAttribute("style", "height:100vh; opacity:1; padding:100px")
+        setNavOpen(true)
+      }else{
+        navBtnBarTop.setAttribute("style" , "transform: none;");
+        navBtnBarBtm.setAttribute("style" , "transform: none;");
+        fullscreenNav.setAttribute("style", "height:0vh; opacity:0; padding:0px")
+        setNavOpen(false)
+      }
+    } else {
+      if (navOpen === false) {
+        navBtnBarTop.setAttribute("style" , "transform: rotate(45deg) translateY(5.5px);");
+        navBtnBarBtm.setAttribute("style" , "transform: rotate(-45deg) translateY(-8px) translateX(2px);");
+        fullscreenNav.setAttribute("style", "height:100vh; opacity:1; padding:100px")
+        setNavOpen(true)
+      }else{
+        navBtnBarTop.setAttribute("style" , "transform: none;");
+        navBtnBarBtm.setAttribute("style" , "transform: none;");
+        fullscreenNav.setAttribute("style", "height:0vh; opacity:0; padding:0px")
+        setNavOpen(false)
+      }
     }
   };
 
@@ -33,7 +47,7 @@ export default function Header() {
           </button>
         </div>
         <div className="center">
-          <img src={logo} alt="" srcset="" />
+          <img src={logo} alt="" />
         </div>
         <div className="right">
           {/* Empty Space */}
@@ -53,12 +67,22 @@ export default function Header() {
           </a>
           <a href="#home">
             <h1>
-              Feature
+              Why Meme States ?
             </h1>
           </a>
-          <a href="#home">
+          <a href="/vote">
             <h1>
-              Why Meme States ?
+              Vote
+            </h1>
+          </a>
+          <a href="/login">
+            <h1>
+              Login
+            </h1>
+          </a>
+          <a href="/signup">
+            <h1>
+              Sign Up
             </h1>
           </a>
         </div>

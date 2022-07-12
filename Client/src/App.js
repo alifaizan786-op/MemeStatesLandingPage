@@ -10,9 +10,13 @@ function App() {
     <div className="App" style={{position:'relative', margin:'0 auto', width:'100%', minWidth:"300px",overflow:'hidden'}}>
       <Router>
         <Header/>
-        <Banner/>
-        <AboutUs/>
-        <Memers/>
+        
+        <Route path={"/"}>
+          <Banner/>
+          <AboutUs/>
+          <Memers/>
+        </Route>
+        
       </Router>
     </div>
   );
