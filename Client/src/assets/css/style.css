@@ -202,6 +202,7 @@ a {
   font-size: 2rem;
   font-weight: 700;
   font-family: "Caveat";
+  z-index: -1;
 }
 
 .banner-one__shape-1 {
@@ -321,7 +322,7 @@ a {
   padding-top: 350px;
   padding-bottom: 230px;
   position: relative;
-  margin: 75px 360px
+  margin: auto;
 }
 .banner-one__title {
   margin: 0;
@@ -449,6 +450,7 @@ a {
   position: absolute;
     bottom: 4%;
     left: 0;
+    z-index: -1;
     transform: scaleX(-1);
 }
 .cta-one .container {
